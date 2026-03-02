@@ -1,0 +1,166 @@
+/* ========== 메인 댄스 애니메이션 ========== */
+@keyframes dance {
+  0%   { transform: translateY(0) rotate(0deg) scale(1); }
+  10%  { transform: translateY(-18px) rotate(-8deg) scale(1.05); }
+  20%  { transform: translateY(-10px) rotate(8deg) scale(1.08); }
+  30%  { transform: translateY(-22px) rotate(-5deg) scale(1.05); }
+  40%  { transform: translateY(-8px) rotate(10deg) scale(1.1); }
+  50%  { transform: translateY(-25px) rotate(0deg) scale(1.12); }
+  60%  { transform: translateY(-8px) rotate(-10deg) scale(1.08); }
+  70%  { transform: translateY(-20px) rotate(5deg) scale(1.05); }
+  80%  { transform: translateY(-12px) rotate(-8deg) scale(1.07); }
+  90%  { transform: translateY(-18px) rotate(6deg) scale(1.04); }
+  100% { transform: translateY(0) rotate(0deg) scale(1); }
+}
+
+@keyframes shadow-pulse {
+  0%   { transform: scaleX(1) scaleY(1); opacity: 0.35; }
+  25%  { transform: scaleX(1.15) scaleY(0.7); opacity: 0.2; }
+  50%  { transform: scaleX(0.85) scaleY(0.55); opacity: 0.15; }
+  75%  { transform: scaleX(1.1) scaleY(0.7); opacity: 0.2; }
+  100% { transform: scaleX(1) scaleY(1); opacity: 0.35; }
+}
+
+@keyframes spotlight-pulse {
+  0%, 100% { opacity: 0.18; transform: scale(1); }
+  50%       { opacity: 0.28; transform: scale(1.05); }
+}
+
+@keyframes note-float-1 {
+  0%   { opacity: 0; transform: translate(0, 0) rotate(0deg) scale(0.5); }
+  20%  { opacity: 1; }
+  80%  { opacity: 0.8; }
+  100% { opacity: 0; transform: translate(-60px, -120px) rotate(-25deg) scale(1.2); }
+}
+
+@keyframes note-float-2 {
+  0%   { opacity: 0; transform: translate(0, 0) rotate(0deg) scale(0.5); }
+  20%  { opacity: 1; }
+  80%  { opacity: 0.8; }
+  100% { opacity: 0; transform: translate(70px, -130px) rotate(20deg) scale(1.3); }
+}
+
+@keyframes note-float-3 {
+  0%   { opacity: 0; transform: translate(0, 0) rotate(0deg) scale(0.5); }
+  20%  { opacity: 1; }
+  80%  { opacity: 0.8; }
+  100% { opacity: 0; transform: translate(-30px, -150px) rotate(-15deg) scale(1.1); }
+}
+
+@keyframes note-float-4 {
+  0%   { opacity: 0; transform: translate(0, 0) rotate(0deg) scale(0.5); }
+  20%  { opacity: 1; }
+  80%  { opacity: 0.8; }
+  100% { opacity: 0; transform: translate(50px, -110px) rotate(30deg) scale(1.25); }
+}
+
+@keyframes note-float-5 {
+  0%   { opacity: 0; transform: translate(0, 0) rotate(0deg) scale(0.5); }
+  20%  { opacity: 1; }
+  80%  { opacity: 0.8; }
+  100% { opacity: 0; transform: translate(-80px, -100px) rotate(-35deg) scale(1.15); }
+}
+
+/* ========== 스테이지 ========== */
+.dancing-cat-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.stage {
+  position: relative;
+  width: 320px;
+  height: 340px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.spotlight {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 240px;
+  height: 340px;
+  background: radial-gradient(ellipse at 50% 100%, rgba(255, 230, 100, 0.25) 0%, transparent 70%);
+  border-radius: 50% 50% 0 0 / 20% 20% 0 0;
+  animation: spotlight-pulse 2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* ========== 고양이 ========== */
+.cat-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: dance var(--dance-duration, 1s) ease-in-out infinite;
+  will-change: transform;
+  transform-origin: center bottom;
+  z-index: 2;
+}
+
+.dancing-cat {
+  width: 180px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
+}
+
+.shadow {
+  width: 120px;
+  height: 20px;
+  background: radial-gradient(ellipse, rgba(0,0,0,0.5) 0%, transparent 70%);
+  border-radius: 50%;
+  margin-top: 4px;
+  animation: shadow-pulse var(--dance-duration, 1s) ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+/* ========== 음표 ========== */
+.notes-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.note {
+  position: absolute;
+  font-size: 1.8rem;
+  font-weight: bold;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  will-change: transform, opacity;
+}
+
+.note-1 { left: 30px;  bottom: 180px; color: #FFD700; animation-name: note-float-1; animation-duration: 2.2s; animation-delay: 0s; }
+.note-2 { right: 25px; bottom: 160px; color: #FF6B9D; animation-name: note-float-2; animation-duration: 2.5s; animation-delay: 0.4s; }
+.note-3 { left: 55px;  bottom: 200px; color: #7FDBFF; animation-name: note-float-3; animation-duration: 2s;   animation-delay: 0.8s; }
+.note-4 { right: 50px; bottom: 190px; color: #B0FF92; animation-name: note-float-4; animation-duration: 2.3s; animation-delay: 1.2s; }
+.note-5 { left: 10px;  bottom: 150px; color: #FF9F43; animation-name: note-float-5; animation-duration: 2.1s; animation-delay: 1.6s; }
+
+/* ========== 반응형 ========== */
+@media (max-width: 768px) {
+  .stage { width: 260px; height: 280px; }
+  .spotlight { width: 200px; height: 280px; }
+  .dancing-cat { width: 150px; }
+  .shadow { width: 100px; }
+  .note { font-size: 1.4rem; }
+}
+
+@media (max-width: 480px) {
+  .stage { width: 220px; height: 240px; }
+  .spotlight { width: 170px; height: 240px; }
+  .dancing-cat { width: 120px; }
+  .shadow { width: 80px; }
+  .note { font-size: 1.2rem; }
+  .note-1 { left: 15px;  bottom: 140px; }
+  .note-2 { right: 10px; bottom: 125px; }
+  .note-3 { left: 30px;  bottom: 155px; }
+  .note-4 { right: 25px; bottom: 148px; }
+  .note-5 { left: 0px;   bottom: 115px; }
+}
