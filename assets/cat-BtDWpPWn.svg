@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 260" width="200" height="260">
+  <!-- Body -->
+  <ellipse cx="100" cy="175" rx="55" ry="65" fill="#FF8C42"/>
+
+  <!-- Head -->
+  <circle cx="100" cy="90" r="55" fill="#FF8C42"/>
+
+  <!-- Left Ear -->
+  <polygon points="52,50 35,10 75,45" fill="#FF8C42"/>
+  <polygon points="55,48 42,20 72,43" fill="#FF6B9D"/>
+
+  <!-- Right Ear -->
+  <polygon points="148,50 165,10 125,45" fill="#FF8C42"/>
+  <polygon points="145,48 158,20 128,43" fill="#FF6B9D"/>
+
+  <!-- Face stripes -->
+  <path d="M 68,65 Q 75,60 80,65" stroke="#E07030" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M 65,72 Q 73,68 78,73" stroke="#E07030" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M 132,65 Q 125,60 120,65" stroke="#E07030" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M 135,72 Q 127,68 122,73" stroke="#E07030" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Eyes -->
+  <ellipse cx="80" cy="82" rx="12" ry="13" fill="white"/>
+  <ellipse cx="120" cy="82" rx="12" ry="13" fill="white"/>
+  <ellipse cx="81" cy="83" rx="7" ry="9" fill="#2C2C54"/>
+  <ellipse cx="121" cy="83" rx="7" ry="9" fill="#2C2C54"/>
+  <!-- Eye shine -->
+  <circle cx="84" cy="79" r="2.5" fill="white"/>
+  <circle cx="124" cy="79" r="2.5" fill="white"/>
+
+  <!-- Nose -->
+  <polygon points="100,100 94,107 106,107" fill="#FF6B9D"/>
+
+  <!-- Mouth -->
+  <path d="M 94,107 Q 100,116 106,107" stroke="#FF6B9D" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M 94,107 Q 87,112 83,110" stroke="#555" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M 106,107 Q 113,112 117,110" stroke="#555" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Cheek blush -->
+  <ellipse cx="67" cy="98" rx="11" ry="7" fill="#FFB3C6" opacity="0.6"/>
+  <ellipse cx="133" cy="98" rx="11" ry="7" fill="#FFB3C6" opacity="0.6"/>
+
+  <!-- Body stripes -->
+  <path d="M 75,145 Q 80,155 78,165" stroke="#E07030" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M 85,140 Q 90,152 88,163" stroke="#E07030" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M 125,145 Q 120,155 122,165" stroke="#E07030" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M 115,140 Q 110,152 112,163" stroke="#E07030" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <!-- Belly -->
+  <ellipse cx="100" cy="185" rx="30" ry="35" fill="#FFECD2"/>
+
+  <!-- Left Arm -->
+  <ellipse cx="52" cy="170" rx="15" ry="28" fill="#FF8C42" transform="rotate(-25 52 170)"/>
+  <!-- Left Paw -->
+  <ellipse cx="38" cy="188" rx="14" ry="10" fill="#FF8C42"/>
+  <ellipse cx="31" cy="190" rx="5" ry="4" fill="#FFECD2"/>
+  <ellipse cx="38" cy="193" rx="5" ry="4" fill="#FFECD2"/>
+  <ellipse cx="45" cy="190" rx="5" ry="4" fill="#FFECD2"/>
+
+  <!-- Right Arm -->
+  <ellipse cx="148" cy="170" rx="15" ry="28" fill="#FF8C42" transform="rotate(25 148 170)"/>
+  <!-- Right Paw -->
+  <ellipse cx="162" cy="188" rx="14" ry="10" fill="#FF8C42"/>
+  <ellipse cx="155" cy="190" rx="5" ry="4" fill="#FFECD2"/>
+  <ellipse cx="162" cy="193" rx="5" ry="4" fill="#FFECD2"/>
+  <ellipse cx="169" cy="190" rx="5" ry="4" fill="#FFECD2"/>
+
+  <!-- Left Leg -->
+  <ellipse cx="78" cy="232" rx="18" ry="14" fill="#FF8C42"/>
+  <ellipse cx="68" cy="238" rx="6" ry="5" fill="#FFECD2"/>
+  <ellipse cx="78" cy="241" rx="6" ry="5" fill="#FFECD2"/>
+  <ellipse cx="88" cy="238" rx="6" ry="5" fill="#FFECD2"/>
+
+  <!-- Right Leg -->
+  <ellipse cx="122" cy="232" rx="18" ry="14" fill="#FF8C42"/>
+  <ellipse cx="112" cy="238" rx="6" ry="5" fill="#FFECD2"/>
+  <ellipse cx="122" cy="241" rx="6" ry="5" fill="#FFECD2"/>
+  <ellipse cx="132" cy="238" rx="6" ry="5" fill="#FFECD2"/>
+
+  <!-- Tail -->
+  <path d="M 155,215 Q 195,200 185,175 Q 175,155 160,160"
+        stroke="#FF8C42" stroke-width="12" fill="none" stroke-linecap="round"/>
+  <path d="M 155,215 Q 195,200 185,175 Q 175,155 160,160"
+        stroke="#E07030" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.5"/>
+  <!-- Tail tip -->
+  <ellipse cx="158" cy="157" rx="10" ry="10" fill="#FFECD2"/>
+</svg>
